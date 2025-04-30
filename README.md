@@ -47,8 +47,8 @@ We use a **Gitflow-like workflow**:
 #### 1. Clone the repository
 
 ```bash
-   git clone https://github.com/designyamah/urgent-2kay-frontend.git
-   cd urgent-2kay-frontend
+   git clone https://github.com/nJosephu/urgent-2kay
+   cd urgent-2kay
 ```
 
 #### 2. Install dependencies
