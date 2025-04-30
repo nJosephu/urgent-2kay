@@ -1,73 +1,118 @@
-# Welcome to your Lovable project
+# 🚀 URGENT 2KAY – Frontend Codebase (React + TypeScript + Vite)
 
-## Project info
+Welcome to the frontend codebase for **URGENT 2KAY**!  
+This repo is set up for fast development, team collaboration, and clean architecture.
 
-**URL**: https://lovable.dev/projects/e0042473-9ab7-432e-bb43-0120282c02be
+> 🛠 This is a living document — we’ll update it as the project grows.
 
-## How can I edit this code?
+## ⚙️ Tech Stack
 
-There are several ways of editing your application.
+- ⚛️ **React** (via Vite + TypeScript)
+- 🎯 **Redux Toolkit** & Context API (for scalable state management)
+- 🎨 **Tailwind CSS** _(or plain CSS if preferred)_
+- 🔀 **React Router**
+- 🐙 **Git + GitHub** for version control
 
-**Use Lovable**
+### 🔗 Live Preview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e0042473-9ab7-432e-bb43-0120282c02be) and start prompting.
+https://urgent-2kay-frontend.vercel.app/
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📚 Project Structure (From `src`)
 
-**Use your preferred IDE**
+| Path                    | Description                                                       |
+| ----------------------- | ----------------------------------------------------------------- |
+| `src/components`        | Reusable UI components (e.g., buttons, form fields, cards).       |
+| `src/fonts`             | Custom fonts used in the application.                             |
+| `src/hooks`             | Custom React hooks (e.g., useAuth, useFetch).                     |
+| `src/images`            | Local image assets used throughout the UI.                        |
+| `src/lib`               | Helper utilities, API functions, or third-party integrations.     |
+| `src/pages`             | Main route-level pages (e.g., Login.tsx, Dashboard.tsx).          |
+| `App.tsx`               | Root component that wraps the application.                        |
+| `main.tsx`              | Vite entry point that mounts the React app.                       |
+| `vite-env.d.ts`         | TypeScript declarations for Vite-specific types (auto-generated). |
+| `App.css` / `index.css` | Global styles and Tailwind directives.                            |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🌱 Branch Strategy
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+We use a **Gitflow-like workflow**:
 
-Follow these steps:
+- `main` – stable code for production release
+- `dev` – main development branch (all features merge here first)
+- `feature/*` – for individual tasks/features (created from `dev`)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### ⚙️ Git Workflow Guide
 
-# Step 3: Install the necessary dependencies.
-npm i
+#### 1. Clone the repository
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+   git clone https://github.com/designyamah/urgent-2kay-frontend.git
+   cd urgent-2kay-frontend
 ```
 
-**Edit a file directly in GitHub**
+#### 2. Install dependencies
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+   npm install
+```
 
-**Use GitHub Codespaces**
+#### 3. Checkout the dev branch
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+   git checkout dev
+   git pull origin dev # Always pull the latest changes
+```
 
-## What technologies are used for this project?
+#### 4. Create a feature branch
 
-This project is built with:
+git checkout -b yourname-feature/your-feature-name
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🔸 Use clear, short names like `joseph-feature/login-form` or `chioma-feature/update-navbar`
 
-## How can I deploy this project?
+#### 5. Work on your feature
 
-Simply open [Lovable](https://lovable.dev/projects/e0042473-9ab7-432e-bb43-0120282c02be) and click on Share -> Publish.
+- Make your changes
+- Frequently commit your progress:
+  git add .
+  git commit -m "Add: implemented login form UI"
 
-## Can I connect a custom domain to my Lovable project?
+#### 6. Push your feature branch
 
-Yes, you can!
+git push -u origin feature/your-feature-name
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+#### 7. Create a Pull Request (PR)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Go to GitHub
+- Open a PR from `feature/your-feature-name` into `dev`
+- Request a review from the team lead or another dev
+
+❗ Do NOT push directly to `dev` or `main`. Always use feature branches and PRs.
+
+🆕 Starting a New Feature After Merging
+Once your previous PR has been approved and merged into dev, and you want to work on a new feature:
+
+✅ First, update your local dev:
+
+```bash
+   git checkout dev
+   git pull origin dev # Always pull the latest changes
+```
+
+✅ Then create a new feature branch based on the updated dev:
+
+```bash
+  git checkout -b yourname-feature/your-next-feature
+```
+
+---
+
+### 🔒 Branch Protection
+
+- `main` is for stable, production-ready code
+- Only the **team lead** merges to `main` after testing
+- All features must go through `dev` first via PRs (Pull Requests)
+
+---
+
+✅ Happy coding, team!
