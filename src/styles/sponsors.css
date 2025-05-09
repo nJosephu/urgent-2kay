@@ -1,0 +1,528 @@
+
+.content-wrapper {
+  flex: 1;
+}
+
+.page-container {
+  display: flex;
+  height: 800px;
+  background-color: #f5f5f5;
+  margin-left: 16rem;
+}
+
+
+
+.sponsors-list-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+.sponsors-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sponsors-title-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sponsors-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.sponsors-count {
+  background-color: #f3e8ff;
+  color: #6544e4;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+}
+
+.sponsors-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+}
+
+.main-content{
+  width: 95%;
+  margin-left: 1.7rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 16px;
+  height: 16px;
+}
+
+.search-input {
+  padding: 8px 16px 8px 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  width: 220px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  border-color: #6544e4;
+  box-shadow: 0 0 0 1px #6544e4;
+}
+
+.create-button {
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #6544e4;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-button:hover {
+  background-color: #5b4dd1;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.sponsors-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sponsors-table th {
+  padding: 12px 16px;
+  text-align: left;
+  color: #909090;
+  background-color: #6f6f6f21;
+  font-weight: 400;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.sponsors-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.sponsor-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.sponsor-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.sponsor-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.action-button {
+  color: #6b7280;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  color: #374151;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  z-index: 50;
+  margin-top: 4px;
+  width: 192px;
+  border-radius: 6px;
+  background-color: white;
+  padding: 4px 0;
+  box-shadow: 0 4px 6px -1px rgba(154, 137, 137, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #374151;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.dropdown-item.delete {
+  color: #dc2626;
+}
+
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 0;
+}
+
+.empty-icon {
+  width: 96px;
+  height: 96px;
+  background-color: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.file-icon {
+  width: 48px;
+  height: 48px;
+  color: #9ca3af;
+}
+
+.empty-text {
+  color: #6b7280;
+  text-align: center;
+  max-width: 400px;
+}
+
+/* Form Styles */
+.sponsor-form-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  max-width: 448px;
+  margin: 0 auto;
+}
+
+.sponsor-name-cell{
+  padding: 0.82rem;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.required {
+  color: #dc2626;
+}
+
+.text-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+}
+
+.text-input:focus {
+  border-color: #6544e4;
+  box-shadow: 0 0 0 1px #6544e4;
+}
+
+.phone-input-container {
+  position: relative;
+}
+
+.country-code {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Country flags */
+.flag-icon {
+  width: 20px;
+  height: 12px;
+  background-color: #16a34a;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Default flag (Nigeria) */
+.flag-icon-ng {
+  background: linear-gradient(to right, #008751 33%, white 33%, white 66%, #008751 66%);
+}
+
+/* Ghana flag */
+.flag-icon-gh {
+  background: linear-gradient(180deg, #ce1126 33%, #fcd116 33%, #fcd116 66%, #006b3f 66%);
+}
+
+/* Kenya flag */
+.flag-icon-ke {
+  background: linear-gradient(180deg, black 33%, #bb0000 33%, #bb0000 66%, #006600 66%);
+}
+
+/* South Africa flag */
+.flag-icon-za {
+  background: linear-gradient(180deg, #de3831 33%, white 33%, white 66%, #002395 66%);
+}
+
+/* Uganda flag */
+.flag-icon-ug {
+  background: linear-gradient(180deg, black 33%, #fcdc04 33%, #fcdc04 66%, #d90000 66%);
+}
+
+/* Add more country flags as needed */
+
+.plus-sign {
+  color: #6b7280;
+}
+
+.phone-input {
+  width: 100%;
+  padding: 12px 12px 12px 64px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+}
+
+.phone-input:focus {
+  border-color: #6544e4;
+  box-shadow: 0 0 0 1px #6544e4;
+}
+
+.clear-button {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  appearance: none;
+  background-color: white;
+  outline: none;
+}
+
+.select-input:focus {
+  border-color: #6544e4;
+  box-shadow: 0 0 0 1px #6544e4;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  color: #9ca3af;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.discard-button {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.discard-button:hover {
+  background-color: #f9fafb;
+}
+
+.submit-button {
+  flex: 1;
+  padding: 12px;
+  background-color: #6544e4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #5b4dd1;
+}
+
+/* Delete Modal Styles - Updated to match the design */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-modal-container {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 16px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.delete-icon-container {
+  width: 80px;
+  height: 80px;
+  background-color: #ffebee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto 16px;
+}
+
+.delete-icon {
+  width: 32px;
+  height: 32px;
+  color: #EF2427;
+}
+
+.delete-modal-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.delete-modal-text {
+  color: #666;
+  margin: 0 32px 24px;
+  line-height: 1.5;
+}
+
+.delete-modal-divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 0;
+}
+
+.delete-modal-actions {
+  display: flex;
+  padding: 16px;
+}
+
+.delete-cancel-button {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.delete-cancel-button:hover {
+  background-color: #f9fafb;
+}
+
+.delete-confirm-button {
+  flex: 1;
+  padding: 12px;
+  background-color: #ef2427;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.delete-confirm-button:hover {
+  background-color: #e53935;
+}
